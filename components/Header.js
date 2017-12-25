@@ -1,15 +1,15 @@
 // import libraries for makign a component
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, SafeAreaView } from 'react-native';
 
 // make a component
 const Header = (props) => {
     const { textStyle, viewStyle } = styles;
 
      return (
-         <View style={viewStyle}>
+         <SafeAreaView style={viewStyle}>
             <Text style={textStyle}>{props.headerText}</Text>
-         </View>
+         </SafeAreaView>
      );
 };
 
@@ -19,8 +19,6 @@ const styles = {
         backgroundColor: '#F8F8F8',
         justifyContent: 'center',
         alignItems: 'center',
-        height: 60,
-        paddingTop: 15,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
@@ -28,7 +26,8 @@ const styles = {
         position: 'relative'
     },
     textStyle: {
-        fontSize: 20
+        fontSize: 20,
+        paddingBottom: 10
     }
 };
 
